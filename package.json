@@ -1,0 +1,16 @@
+{
+	"name": "test",
+	"version": "1.0.0",
+	"description": "Test",
+	"scripts": {
+		"start": "concurrently --kill-others \"npm run api\" \"npm run webapp\"",
+		"api": "cd ./api/ && npm start",
+		"webapp": "cd ./webapp/ && npm start"
+	},
+	"keywords": [],
+	"author": "Sergiy Savostin",
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^7.3.0"
+	}
+}
