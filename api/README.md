@@ -84,4 +84,4 @@ All API responses come with:
 
 For testing purpose API uses SQLite database. Tables are created at the start if needed.
 The currency rates table contains all historical rates. The API returns the last one for each pair.
-The API arichitecture is not RESTfull due to lack of information about the project structure and requirements.
+The API arichitecture is not CRUD due to lack of information about the project structure and requirements.
