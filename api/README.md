@@ -85,5 +85,7 @@ All API response payloads contain the following parameters:
 * Response
 
 For testing purpose the API, uses an SQLite database. Tables will be created at launch time if needed.
+
 The currency rates table contains all historical rates. The API returns the latest one for each pair.
+
 **The API arichitecture does not currently conform to the CRUD paradigm due to the lack of information about the project structure and requirements. This can therefore be improved once the required information is there.**
