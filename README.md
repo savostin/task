@@ -41,7 +41,20 @@
 
 # Task resolution
 
-Both parts are developed with Node.js. Could use common code base, data structures, etc. Tecnologies and frameworks used are marked as __bold__. Time spent for the task: __6 hours__.
+Both parts are developed with Node.js. Could use common code base, data structures, etc. Tecnologies and frameworks used are marked as __bold__. Time spent for the task: __10 hours__.
+
+### Future thoughts and things to improve:
+
+* Change the way the JWT token is kept on client side. It's potencially [insecure](https://www.rdegges.com/2018/please-stop-using-local-storage/) to store it in the local storage. Depends on the project security requirements.
+* Reorganize the API architecture to proper CRUD / RESTfull combinnig with other API calls required for the Dashboard.
+* On backend it's better to move the user related functions to the dashboard level as they may be needed for other blocks.
+* More error handling. There are still some possible flows with unhandled errors.
+* Deal with session expiration. Depending on project requirements, warn and logout user after X minutes of inactivity.
+* Implement registration page on the frontend and logout routime on both.
+* Add more unit tests.
+* Frontend is not optimised for screens less than 1200 px wide.
+
+### More details:
 * [Backend](api/)
 * [Frontend](webapp/)
 
