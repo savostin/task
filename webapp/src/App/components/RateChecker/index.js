@@ -133,7 +133,7 @@ function RateChecker() {
 												</Row>
 											</Form.Item>
 											<Form.Item name = 'convertTo'
-													label = { <Row className = 'muli semi-bold fs-18px' > <Button onClick = { swap } disabled = {!(rate.cur.from !== null && rate.cur.to !== null) } >↑↓</Button> Convert To</Row> } >
+													label = { <Space className='muli semi-bold fs-18px'><Button onClick = { swap } disabled = {!(rate.cur.from !== null && rate.cur.to !== null) } className="">↑↓</Button> Convert To</Space> } >
 												<Row gutter = { 8 } >
 													<Col span = { 8 } >
 														<Select className = 'dark-green'
