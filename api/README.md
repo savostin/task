@@ -1,16 +1,17 @@
 # API
 ## Getting Started
-### In the project directory, you can run:
+### Navigate to the project directory and run the following commands:
+
 ##### `npm i` to set up the project
 ##### `npm start` to start the server
 ##### `npm test` to run API integration tests
 
-API server enveironment variables:
+API server environment variables:
 * TOKEN_KEY - token encryption salt
-* API_PORT or PORT - API webserver listening port
-* DB_FILE - sqlite database file
+* API_PORT or PORT - port number to which the API web server is listening
+* DB_FILE - SQLite database file
 
-The API provides following services:
+The API provides the following services:
 * **User registration** */register*
 	* HTTP method: **POST**
 	* Input parameters:
@@ -25,12 +26,12 @@ The API provides following services:
 		* Session token
 		* Refresh token
 	* Errors:
-		* **EMAIL_INPUT_ERROR** invalid e-mail
-		* **FIRST_NAME_INPUT_ERROR** blank first name
-		* **LAST_NAME_INPUT_ERROR** blank last name
+		* **EMAIL_INPUT_ERROR** invalid email
+		* **FIRST_NAME_INPUT_ERROR** first name is empty
+		* **LAST_NAME_INPUT_ERROR** last name is empty
 		* **PASSWORD_INPUT_ERROR** password is empty
 		* **PASSWORD_WEAK_ERROR** password is weak
-		* **USER_EXISTS** there is another user with the same e-mail
+		* **USER_EXISTS** there is already another user with the same email
 * **User authentication** */login*
 	* HTTP method: **POST**
 	* Input parameters:
@@ -54,35 +55,35 @@ The API provides following services:
 	* Output:
 		* Session token
 	* Errors:
-		* **EMAIL_INPUT_ERROR** invalid e-mail
+		* **EMAIL_INPUT_ERROR** invalid email
 		* **TOKEN_INPUT_ERROR** token is empty
-		* **AUTH_FAILED** refresh token is incorrect
+		* **AUTH_FAILED** refresh token is invalid
 * **Currency rates** */rates*
 	* HTTP method: **GET**
 	* Header required:
 		* x-access-token: *access token*
 	* Output:
 		* **currencies** (array): list of ISO3 currency codes
-		* **rates** (array of arrays, "matrix"): current rate for currencies in the same order as **currencies** array, rows to columns. *null* for empty value.
+		* **rates** (array of arrays, "matrix"): list of up-to-date currency rates sorted in the same order as the **currencies** array, rows to columns. Returns *null* for empty value.
 	* Errors:
 		* **AUTH_TOKEN_REQUIRED** access token header is empty
-		* **AUTH_TOKEN_ERROR** token is wrong or expired
+		* **AUTH_TOKEN_ERROR** token is invalid or expired
 * **API documentation** */docs*
 	* HTTP method: **GET**
 	* Output: Swagger UI
 
-Input formats supported:
+Input format supported:
 * JSON
 
-Output formats supported:
+Output format supported:
 * JSON
 
-All API responses come with:
-* API version
-* Request timestamp
-* Error code (*null* for success requests)
+All API response payloads contain the following parameters:
+* API version number
+* Timestamp at the time of request
+* Error code (*null* for successful requests)
 * Response
 
-For testing purpose API uses SQLite database. Tables are created at the start if needed.
-The currency rates table contains all historical rates. The API returns the last one for each pair.
-The API arichitecture is not CRUD due to lack of information about the project structure and requirements.
+For testing purpose the API, uses an SQLite database. Tables will be created at launch time if needed.
+The currency rates table contains all historical rates. The API returns the latest one for each pair.
+**The API arichitecture does not currently conform to the CRUD paradigm due to the lack of information about the project structure and requirements. This can therefore be improved once the required information is there.**
