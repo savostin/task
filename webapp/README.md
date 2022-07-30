@@ -13,7 +13,7 @@ password: `VeryStr0ngP@$$w0rd!`
 
 ![Login window](screens/login.png?raw=true "Login window")
 
-The fields are validated and all invalid values highlighted with a red border around the respective form control.
+The fields will be validated and all invalid values will be highlighted with a red border around the respective form control.
 After logging in, a dashboard appears. The purpose of the task is to make the **Rate Checker** widget work correctly.
 
 ![Rate Checker](screens/RateChecker.png?raw=true "Rate Checker block")
