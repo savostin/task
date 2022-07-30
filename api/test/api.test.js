@@ -1,4 +1,4 @@
-process.env.DB_FILE = 'test.db';
+process.env.DB_FILE = './test/test.db';
 process.env.API_PORT = 4321;
 
 const expect = require('chai').expect
