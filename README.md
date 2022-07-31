@@ -43,18 +43,6 @@
 
 Both frontend and backend systems are developed using Node.js. They can share code base, data structures, etc. The tecnology and frameworks used in the process are marked with __bold__ font. Time spent on this coding challenge: __10 hours__.
 
-### Future considerations and things to improve:
-
-* Change the way the JWT token is maintained at client side. It's potentially [insecure](https://www.rdegges.com/2018/please-stop-using-local-storage/) to store it in the local storage. This is subject to the project security requirements.
-* Introduce proper CRUD / RESTful API architecture combined with other API calls required for the Dashboard.
-* Move to a more solid framework, like [JSON:Api](https://jsonapi.org/)
-* In the backend, it makes sense to move user-related functionality to the dashboard level, as it might be required for other dashboard blocks.
-* Extensive error handling. There are still some potential flows with unhandled errors.
-* Deal with session expiration. Depending on project requirements, issue a warning and log user out after X minutes of inactivity.
-* Introduce a registration page in the frontend and a logout routime in both backend and frontend.
-* Add more unit tests.
-* Optimise frontend for screens resolution less than 1200 px wide.
-
 ### More details:
 * [Backend](api/)
 * [Frontend](webapp/)
@@ -66,3 +54,14 @@ To launch both the API and the app, run the following:
 ##### `cd ./webapp && npm i` to set up the WebApp project
 ##### `npm start` to start
 
+### Future considerations and things to improve:
+
+* Change the way the JWT token is maintained at client side. It's potentially [insecure](https://www.rdegges.com/2018/please-stop-using-local-storage/) to store it in the local storage. This is subject to the project security requirements.
+* Introduce proper CRUD / RESTful API architecture combined with other API calls required for the Dashboard.
+* Move to a more solid framework, like [JSON:Api](https://jsonapi.org/)
+* In the backend, it makes sense to move user-related functionality to the dashboard level, as it might be required for other dashboard blocks.
+* Extensive error handling. There are still some potential flows with unhandled errors.
+* Deal with session expiration. Depending on project requirements, issue a warning and log user out after X minutes of inactivity.
+* Introduce a registration page in the frontend and a logout routime in both backend and frontend.
+* Add more unit tests.
+* Optimise frontend for screens resolution less than 1200 px wide.
