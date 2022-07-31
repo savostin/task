@@ -47,6 +47,7 @@ Both frontend and backend systems are developed using Node.js. They can share co
 
 * Change the way the JWT token is maintained at client side. It's potentially [insecure](https://www.rdegges.com/2018/please-stop-using-local-storage/) to store it in the local storage. This is subject to the project security requirements.
 * Introduce proper CRUD / RESTful API architecture combined with other API calls required for the Dashboard.
+* Move to a more solid framework, like [JSON:Api](https://jsonapi.org/)
 * In the backend, it makes sense to move user-related functionality to the dashboard level, as it might be required for other dashboard blocks.
 * Extensive error handling. There are still some potential flows with unhandled errors.
 * Deal with session expiration. Depending on project requirements, issue a warning and log user out after X minutes of inactivity.
